@@ -20,4 +20,13 @@ eureka:
   instance:
     hostname: localhost
 
-    
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: lombok
+          group: comments
+          content-type: application/json
+        output:
+          destination: lombok
